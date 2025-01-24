@@ -5,8 +5,8 @@ public class Level{
     private final char[][] map;
 
     static char wall = '#';
-    static char way = '৹';
-    static char finishSymbol = '⩓';
+    static char way = '+';
+    static char finishSymbol = '$';
 
     public Level(char[][] map){
         this.map = map;
@@ -24,7 +24,7 @@ public class Level{
                         {way, wall, way, wall, way, wall, way, wall, way},
                         {way, wall, way, wall, way, wall, way, wall, way},
                         {way, wall, way, wall, way, wall, way, wall, way},
-                        {way, way, way, wall, way, way, way, wall, finishSymbol},
+                        {way, way , way, wall, way, way, way, wall, finishSymbol},
                 }),
                 new Level(new char[][]{
                         {way, wall, way, way, way, wall, way, way, way},

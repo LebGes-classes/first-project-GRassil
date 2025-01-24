@@ -20,26 +20,27 @@ public class Game{
     static void playLevel(Level level, Hero hero, Scanner scanner){
         while (!isFinish(hero, level)){
             printScreen(level, hero);
+			System.out.println("Цель -  дойти до нижнего правого угла");
             System.out.println("Введите ход (w - вверх, s - вниз, a - влево, d - вправо), " +
                     "если хотите выйти то q: ");
             switch (scanner.next()){
                 case "w":
-                    hero.move(0,-1,level);
+                    MoveHero.moveHero(0,-1, level, hero);
                     break;
                 case "s":
-                    hero.move(0,1,level);
+                    MoveHero.moveHero(0,1, level, hero);
                     break;
                 case "a":
-                    hero.move(-1,0,level);
+                    MoveHero.moveHero(-1,0, level, hero);
                     break;
                 case "d":
-                    hero.move(1,0,level);
+                    MoveHero.moveHero(1,0, level, hero);
                     break;
                 case "q":
                     MainMenu.menu();
                     break;
                 case "0":
-                    hero.move(level.getSize()-1,level.getSize()-1, level);
+                    MoveHero.moveHero(level.getSize()-1,level.getSize()-1, level, hero);
                     break;
                 default:
                     System.out.println("Неправильный ввод. Повторите ввод...");
